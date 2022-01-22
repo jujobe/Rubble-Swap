@@ -1,10 +1,11 @@
 /// @description Movement
 
+if (keyboard_check_pressed(ord("R"))) room_restart();
+
 if (keyboard_check_pressed(ord("A"))) facing = dir.left;
 if (keyboard_check_pressed(ord("D"))) facing = dir.right;
 
-if (keyboard_check_pressed(ord("R"))) room_restart();
-
+image_xscale = facing;
 
 if (keyboard_check_pressed(vk_space)) shoot_swap();
 
@@ -19,6 +20,9 @@ if (keyboard_check_pressed(ord("W")) && place_meeting(x, y+1, oWall)){ //Initial
 		image_index = 1;
 		y += 1;
 	}else{
+		while(!place_meeting(x, y+0.1, oWall)){
+			y += 0.1;
+		}
 		sprite_index = sPlayer;
 		update_height(room_height - y + sprite_yoffset);
 	}
@@ -30,4 +34,4 @@ if (keyboard_check_pressed(ord("W")) && place_meeting(x, y+1, oWall)){ //Initial
 	image_index = 0;
 }
 
-image_xscale = facing;
+if (place_meeting(x, y, oRubble)) room_restart();

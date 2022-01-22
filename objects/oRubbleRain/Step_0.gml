@@ -14,3 +14,4 @@ if (amount < 20){
 }
 
 instance_create_layer(spawn_index*global.grid_side, y, "Walls", oRubble);
+amount++;
