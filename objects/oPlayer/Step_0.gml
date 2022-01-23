@@ -16,9 +16,9 @@ if (keyboard_check_pressed(ord("W")) && place_meeting(x, y+1, oWall)){ //Initial
 	vsp = jumpheight;
 	y -= vsp;
 }else if (jumptimer > 30){	//Not jumping
-	if (!place_meeting(x, y+1, oWall)){
+	if (!place_meeting(x, y+1.25, oWall)){
 		image_index = 1;
-		y += 1;
+		y += 1.25;
 	}else{
 		while(!place_meeting(x, y+0.1, oWall)){
 			y += 0.1;

@@ -5,7 +5,9 @@ enum dir{
 	right = 1
 }
 
-jumpheight = 2 * global.grid_side / 30; //Jumps 2 blocks
+show_debug_overlay(true);
+
+jumpheight = 2.2 * global.grid_side / 30; //Jumps 2 blocks
 jumptimer = 80;
 
 facing = dir.left;
@@ -24,8 +26,13 @@ function get_swapped(rubble_id){
 	var new_x = rubble_id.x + x_offset;
 	var new_y = rubble_id.y + y_offset;
 	
+	oRubbleRain.amount_arr[rubble_id.x div global.grid_side]--;
+	
 	rubble_id.x = x - x_offset;
 	rubble_id.y = y - y_offset;
 	x = new_x;
 	y = new_y;
+	
+	oRubbleRain.amount_arr[rubble_id.x div global.grid_side]++;
+	jumptimer = 40;
 }

@@ -4,6 +4,7 @@ x = room_width/2;
 y = room_height - global.grid_side;
 
 target_y = y;
+just_shifted = false;
 
 global.game_width = 112;
 global.game_height = 128;

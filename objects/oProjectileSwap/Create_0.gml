@@ -1,4 +1,4 @@
 /// @description Parameters
 
-spd = 2.4;
+spd = 2.6;
 facing = noone;
