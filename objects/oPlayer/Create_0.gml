@@ -5,8 +5,6 @@ enum dir{
 	right = 1
 }
 
-show_debug_overlay(true);
-
 jumpheight = 2.2 * global.grid_side / 30; //Jumps 2 blocks
 jumptimer = 80;
 
