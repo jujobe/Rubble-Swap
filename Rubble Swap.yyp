@@ -1,8 +1,10 @@
 {
   "resources": [
     {"id":{"name":"oRubbleRain","path":"objects/oRubbleRain/oRubbleRain.yy",},"order":2,},
+    {"id":{"name":"save_highscore","path":"scripts/save_highscore/save_highscore.yy",},"order":7,},
     {"id":{"name":"kinda_random","path":"scripts/kinda_random/kinda_random.yy",},"order":0,},
     {"id":{"name":"tsDirt","path":"tilesets/tsDirt/tsDirt.yy",},"order":1,},
+    {"id":{"name":"oGameEnd","path":"objects/oGameEnd/oGameEnd.yy",},"order":2,},
     {"id":{"name":"sRubble","path":"sprites/sRubble/sRubble.yy",},"order":1,},
     {"id":{"name":"MainMenu","path":"rooms/MainMenu/MainMenu.yy",},"order":1,},
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},"order":0,},
@@ -17,10 +19,11 @@
     {"id":{"name":"oPointDisplay","path":"objects/oPointDisplay/oPointDisplay.yy",},"order":4,},
     {"id":{"name":"menu_functions","path":"scripts/menu_functions/menu_functions.yy",},"order":3,},
     {"id":{"name":"oPause","path":"objects/oPause/oPause.yy",},"order":1,},
-    {"id":{"name":"string_mods","path":"scripts/string_mods/string_mods.yy",},"order":5,},
+    {"id":{"name":"string_mods","path":"scripts/string_mods/string_mods.yy",},"order":4,},
     {"id":{"name":"oMainMenu","path":"objects/oMainMenu/oMainMenu.yy",},"order":0,},
     {"id":{"name":"oWall","path":"objects/oWall/oWall.yy",},"order":0,},
     {"id":{"name":"oInitializer","path":"objects/oInitializer/oInitializer.yy",},"order":1,},
+    {"id":{"name":"ini_readwrite","path":"scripts/ini_readwrite/ini_readwrite.yy",},"order":6,},
     {"id":{"name":"sProjectileSwap","path":"sprites/sProjectileSwap/sProjectileSwap.yy",},"order":3,},
     {"id":{"name":"oInfinitor","path":"objects/oInfinitor/oInfinitor.yy",},"order":3,},
     {"id":{"name":"oProjectileSwap","path":"objects/oProjectileSwap/oProjectileSwap.yy",},"order":6,},

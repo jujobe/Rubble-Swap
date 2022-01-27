@@ -3,13 +3,7 @@
 //Drawing the sprite
 var ds_grid = menu_pages[page];
 var ds_height = ds_grid_height(ds_grid);
-var start_y = global.game_height/2 - (ds_height+1)*y_buffer/2;
-
-draw_set_alpha(0.8);
-var c = c_dkgrey;
-draw_rectangle_color(0,0, global.game_width, global.game_height, c,c,c,c, false);
-
-draw_set_alpha(1);
+var start_y = actual_height/2 - (ds_height+1)*y_buffer/2;
 
 //Draw text
 draw_set_halign(fa_center);
@@ -18,7 +12,7 @@ c = c_white;
 var lty;
 for (var i=0; i < ds_height; i++){
 	lty = start_y + fontsize + i*y_buffer;
-	var rtx = start_x + 20;
+	var rtx = start_x + 40;
 	c = c_white;
 	if (i == menu_option[page]) c = c_maroon;
 	
@@ -26,7 +20,7 @@ for (var i=0; i < ds_height; i++){
 		case menu_element_type.input:
 			var current_val = ds_grid[# 3, i];
 			
-			if (makinginput == i) var string_val = "Press a button!";
+			if (makinginput == i) var string_val = "Editing!";
 			else var string_val = key_to_string(current_val);
 
 			draw_set_halign(fa_left);
@@ -35,7 +29,7 @@ for (var i=0; i < ds_height; i++){
 			break;
 		case menu_element_type.toggle:
 			draw_set_halign(fa_left);
-			var ind = ds_grid[# 3, i] ? 0 : 1;
+			var ind = ds_grid[# 3, i] == 1 ? 0 : 1;
 			draw_text_color(rtx, lty, ds_grid[# 4, i][ind], c,c,c,c, 1);
 			draw_set_halign(fa_right);
 			break;

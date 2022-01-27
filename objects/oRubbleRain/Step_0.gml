@@ -1,5 +1,7 @@
 /// @description Drop rubble
 
+if (global.pause) exit;
+
 timer++;
 
 //Skips frame if the drop is too early

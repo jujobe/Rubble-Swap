@@ -1,5 +1,7 @@
 /// @description Initialize swap
 
+if (global.pause) exit;
+
 x += facing*spd;
 
 var hit = instance_place(x, y, oWall);

@@ -1,5 +1,7 @@
 /// @description Fall Down
 
+if (global.pause) exit;
+
 if (!place_meeting(x, y+1, oWall)){
 	y += 1;
 	

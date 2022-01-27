@@ -4,7 +4,6 @@ enum menu_page{
 	main,
 	audio,
 	controls,
-	leave,
 	height
 }
 
@@ -15,28 +14,23 @@ enum menu_element_type{
 	input
 }
 
-function menu_setup(){
-	start_x = global.game_width/2;
-}
-
 //Creating menu pages
 ds_menu_main = create_menu_page(
-	["Endless", menu_element_type.script_runner, resume_game],
-	["Settings", menu_element_type.page_transfer, menu_page.audio],
-	["Exit", menu_element_type.page_transfer, menu_page.leave])
+	["Endless", menu_element_type.script_runner, room_goto, Endless],
+	["Settings", menu_element_type.page_transfer, menu_page.audio])
 
 ds_settings = create_menu_page(
 	["Controls", menu_element_type.page_transfer, menu_page.controls],
-	["Music", menu_element_type.toggle, toggle_music, global.sound, ["ON", "OFF"]],
-	["Sound", menu_element_type.toggle, toggle_sound, global.music, ["ON", "OFF"]],
+	["Music", menu_element_type.toggle, toggle_music, global.music, ["ON", "OFF"]],
+	["Sound", menu_element_type.toggle, toggle_sound, global.sound, ["ON", "OFF"]],
 	["Back", menu_element_type.page_transfer, menu_page.main])
 
 ds_controls = create_menu_page(
-	["Jump", menu_element_type.input, "key_up", global.key_up],
+	["Jump", menu_element_type.input, "key_jump", global.key_jump],
 	["Left", menu_element_type.input, "key_left", global.key_left],
 	["Right", menu_element_type.input, "key_right", global.key_right],
 	["Shoot", menu_element_type.input, "key_shoot", global.key_shoot],
-	["Back", menu_element_type.page_transfer, menu_page.main]) 
+	["Back", menu_element_type.page_transfer, menu_page.main])
 
 page = 0;
 menu_pages = [ds_menu_main, ds_settings, ds_controls];
@@ -45,8 +39,11 @@ for (var i = menu_len; i > 0; i--){
 	menu_option[i] = 0;
 }
 
+actual_width = global.game_width*global.game_scale;
+actual_height = global.game_height*global.game_scale;
+draw_set_font(fPoints);
 fontsize = font_get_size(fPoints);
-y_buffer = 40;
-menu_setup();
+y_buffer = 60;
+start_x = actual_width/3;
 
 makinginput = -1; //Index of control being changed (also used like a bool with < 0)

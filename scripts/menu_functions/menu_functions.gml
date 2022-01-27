@@ -15,11 +15,10 @@ function create_menu_page(){
 	return ds_grid_id;
 }
 
-function resume_game(){
-	instance_destroy(oPause);
+function toggle_sound(){
+	global.sound = global.sound == 1 ? 0 : 1;
 }
 
-function go_back(){
-	if (room == MainMenu) game_end();
-	else room_goto(MainMenu);
+function toggle_music(){
+	global.music = global.music == 1 ? 0 : 1;
 }

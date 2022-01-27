@@ -1,6 +1,19 @@
 /// @description Movement
 
-if (keyboard_check_pressed(ord("R"))) room_restart();
+if (global.pause){
+	image_speed = 0;
+	exit;
+}else image_speed = 1;
+
+if (keyboard_check_pressed(ord("P")) || keyboard_check_pressed(vk_escape)){
+	instance_create_layer(0, 0, "Extra", oPause);
+	exit;
+}
+
+if (keyboard_check_pressed(ord("R"))){
+	save_highscore();
+	room_restart();
+}
 
 if (keyboard_check_pressed(ord("A"))) facing = dir.left;
 if (keyboard_check_pressed(ord("D"))) facing = dir.right;
@@ -34,4 +47,4 @@ if (keyboard_check_pressed(ord("W")) && place_meeting(x, y+1, oWall)){ //Initial
 	image_index = 0;
 }
 
-if (place_meeting(x, y, oRubble)) room_restart();
+if (place_meeting(x, y, oRubble)) instance_create_layer(0,0, "Extra", oGameEnd);
