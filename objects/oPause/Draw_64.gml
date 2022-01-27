@@ -9,13 +9,17 @@ draw_set_alpha(1);
 
 //Draw text
 draw_set_halign(fa_center);
-c = c_white;
+var extra;
 
 var lty;
 for (var i=0; i < 2; i++){
 	lty = start_y + fontsize + i*y_buffer;
-	c = c_white;
-	if (i == current_option) c = c_maroon;
+	c = c_yellow;
+	extra = "";
+	if (i == current_option){
+		c = c_white;
+		extra = "<";
+	}
 	
-	draw_text_color(start_x, lty, pause_menu[i], c,c,c,c, 1);
+	draw_text_color(start_x, lty, pause_menu[i] + extra, c,c,c,c, 1);
 }

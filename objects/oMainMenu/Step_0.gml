@@ -8,7 +8,7 @@ ds_height = ds_grid_height(ds_grid);
 if (makinginput < 0){
 	var input_up = keyboard_check_pressed(ord("W")) || keyboard_check_pressed(vk_up);
 	var input_down = keyboard_check_pressed(ord("S")) || keyboard_check_pressed(vk_down);
-	input_enter = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) || keyboard_check_pressed(global.key_jump) || keyboard_check_pressed(global.key_shoot);
+	input_enter = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) || keyboard_check_pressed(global.key_shoot);
 	var ochange = input_down - input_up;
 	if (ochange != 0){
 		menu_option[page] += ochange;

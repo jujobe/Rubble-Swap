@@ -7,14 +7,19 @@ var start_y = actual_height/2 - (ds_height+1)*y_buffer/2;
 
 //Draw text
 draw_set_halign(fa_center);
-c = c_white;
+var c;
+var extra;
 
 var lty;
 for (var i=0; i < ds_height; i++){
 	lty = start_y + fontsize + i*y_buffer;
 	var rtx = start_x + 40;
-	c = c_white;
-	if (i == menu_option[page]) c = c_maroon;
+	c = c_yellow;
+	extra = "";
+	if (i == menu_option[page]){
+		c = c_white;
+		extra = "<";
+	}
 	
 	switch (ds_grid[# 1, i]){
 		case menu_element_type.input:
@@ -35,5 +40,5 @@ for (var i=0; i < ds_height; i++){
 			break;
 		default: draw_set_halign(fa_center); break;
 	}
-	draw_text_color(start_x, lty, ds_grid[# 0, i], c,c,c,c, 1);
+	draw_text_color(start_x, lty, ds_grid[# 0, i] + extra, c,c,c,c, 1);
 }
