@@ -8,7 +8,7 @@ draw_set_alpha(1);
 //Draw text
 c = c_white;
 
-if (global.highscore < result) draw_text(start_x, 50, "New Highscore!!!");
+if (global.highscore < result) draw_text(start_x, 50, "New Highscore!");
 
 draw_text(start_x, 120, "Score: " + string(result));
 

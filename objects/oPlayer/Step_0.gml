@@ -15,16 +15,16 @@ if (keyboard_check_pressed(ord("R"))){
 	room_restart();
 }
 
-if (keyboard_check_pressed(ord("A"))) facing = dir.left;
-if (keyboard_check_pressed(ord("D"))) facing = dir.right;
+if (keyboard_check_pressed(global.key_left)) facing = dir.left;
+if (keyboard_check_pressed(global.key_right)) facing = dir.right;
 
 image_xscale = facing;
 
-if (keyboard_check_pressed(vk_space)) shoot_swap();
+if (keyboard_check_pressed(global.key_shoot)) shoot_swap();
 
 var vsp = 0;
 
-if (keyboard_check_pressed(ord("W")) && place_meeting(x, y+1, oWall)){ //Initialize jump
+if (keyboard_check_pressed(global.key_jump) && place_meeting(x, y+1, oWall)){ //Initialize jump
 	jumptimer = 0;
 	vsp = jumpheight;
 	y -= vsp;
