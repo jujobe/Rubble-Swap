@@ -21,6 +21,8 @@ function shift_down(){
 	collision_rectangle_list(0, 0, room_width, room_height, oPlayer, false, false, shift_worthy, false);
 	collision_rectangle_list(0, 0, room_width, room_height, oProjectileSwap, false, false, shift_worthy, false);
 	collision_rectangle_list(0, 0, room_width, room_height, oCamera, false, false, shift_worthy, false);
+	collision_rectangle_list(0, 0, room_width, room_height, oBackground, false, false, shift_worthy, false);
+
 
 	list_size = ds_list_size(shift_worthy);
 	for (var i=0; i < list_size; i++){

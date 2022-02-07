@@ -3,7 +3,7 @@
 randomise();
 
 global.grid_side = 16; //px
-global.current_height = 0;
+global.current_height = 1;
 
 global.pause = false;
 
