@@ -10,3 +10,5 @@ start_x = actual_width/2;
 draw_set_halign(fa_center);
 
 result = global.current_height + global.shifted_rows - 1;
+
+yellow = make_color_rgb(243, 208, 47);

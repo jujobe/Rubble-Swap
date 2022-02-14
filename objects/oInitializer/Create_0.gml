@@ -24,4 +24,6 @@ global.highscore = ini_readwrite_real("Records", "Highscore", 0);
 
 ini_close();
 
+audio_group_load(grSound);
+
 room_goto(MainMenu);

@@ -11,6 +11,7 @@ jumptimer = 80;
 facing = dir.left;
 
 function shoot_swap(){
+	audio_play_sound(aShoot, 2, false);
 	if (instance_exists(oProjectileSwap)) exit;
 	var proj = instance_create_layer(x, y, "Projectile", oProjectileSwap);
 	proj.facing = facing;
@@ -18,6 +19,7 @@ function shoot_swap(){
 }
 
 function get_swapped(rubble_id){
+	audio_play_sound(aSwap, 3, false);
 	var x_offset = global.grid_side/2;
 	var y_offset = global.grid_side - sprite_yoffset;
 	

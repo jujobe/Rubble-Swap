@@ -14,10 +14,10 @@ var lty;
 for (var i=0; i < ds_height; i++){
 	lty = start_y + fontsize + i*y_buffer;
 	var rtx = start_x + 40;
-	c = c_yellow;
+	c = non_select_col;
 	extra = "";
 	if (i == menu_option[page]){
-		c = c_white;
+		c = select_col;
 		extra = "<";
 	}
 	

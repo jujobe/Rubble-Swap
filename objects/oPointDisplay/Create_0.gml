@@ -2,7 +2,8 @@
 
 draw_set_font(fPoints);
 draw_set_halign(fa_center);
-orange = make_color_rgb(121, 78, 35);
+orange = make_color_rgb(101, 57, 15);
+yellow = make_color_rgb(218, 182, 19);
 
 _x = global.game_width*global.game_scale / 2;
 _y = 30;

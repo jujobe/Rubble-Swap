@@ -14,10 +14,10 @@ var extra;
 var lty;
 for (var i=0; i < 2; i++){
 	lty = start_y + fontsize + i*y_buffer;
-	c = c_yellow;
+	c = non_select_col;
 	extra = "";
 	if (i == current_option){
-		c = c_white;
+		c = select_col;
 		extra = "<";
 	}
 	

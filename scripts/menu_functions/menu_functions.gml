@@ -17,8 +17,10 @@ function create_menu_page(){
 
 function toggle_sound(){
 	global.sound = global.sound == 1 ? 0 : 1;
+	audio_group_set_gain(grSound, global.sound, 1);
 }
 
 function toggle_music(){
 	global.music = global.music == 1 ? 0 : 1;
+	audio_group_set_gain(grMusic, global.music, 1);
 }

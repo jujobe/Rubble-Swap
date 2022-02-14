@@ -11,6 +11,7 @@ if (makinginput < 0){
 	input_enter = keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space) || keyboard_check_pressed(global.key_shoot);
 	var ochange = input_down - input_up;
 	if (ochange != 0){
+		audio_play_sound(aMenuChange, 10, false);
 		menu_option[page] += ochange;
 		if (menu_option[page] > ds_height-1) menu_option[page] = 0;
 		else if (menu_option[page] < 0) menu_option[page] = ds_height - 1;
@@ -35,15 +36,21 @@ var mouse_menu_y = device_mouse_y_to_gui(0);
 
 if (mouse_menu_y > start_y && mouse_menu_y < end_y){
 	var mouse_left = mouse_check_button_pressed(mb_left);
-	menu_option[page] = (mouse_menu_y - start_y) div y_buffer;
+	if (abs(mouse_y - mouse_last_y) > 0.8){
+		mouse_last_y = mouse_y;
+		var old_option = menu_option[page];
+		menu_option[page] = (mouse_menu_y - start_y) div y_buffer;
+		if (menu_option[page] != old_option) audio_play_sound(aMenuChange, 10, false);
+	}
 	
-	if (mouse_menu_x > start_x-100 && mouse_menu_x < start_x+100){
+	if (mouse_menu_x > start_x-70 && mouse_menu_x < start_x+70){
 		input_enter += mouse_left
 	}
 }
 
 //Changing settings
 if (input_enter){
+	audio_play_sound(aMenuChange, 10, false);
 	menu_option[page] = min(menu_option[page], ds_height);
 	switch (ds_grid[# 1, menu_option[page]]){
 		case menu_element_type.page_transfer:

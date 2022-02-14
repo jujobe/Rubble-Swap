@@ -4,7 +4,8 @@ var points = global.current_height + global.shifted_rows - 1;
 
 draw_set_color(orange);
 draw_text(_x+3, _y+2, points);
-draw_set_color(c_yellow);
+draw_text(_x_h+3, _y+2, highscore);
+draw_set_color(yellow);
 draw_text(_x, _y, points);
 draw_text(_x_h, _y, highscore);
 

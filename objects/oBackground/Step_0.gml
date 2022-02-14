@@ -2,11 +2,10 @@
 
 var curr_pos = global.current_height + global.shifted_rows;
 
-ratio = power(pow_base, curr_pos);
+var ratio = power(pow_base, curr_pos);
 
-var pos_append = 1 - ratio*wiggle_room;
+var pos_append = (1 - ratio)*start_y;
 
-var y_pos = max(start_pos, oCamera.target_y + start_pos + pos_append);
+target_y = start_y - pos_append;
 
-y += (y_pos - y)/8;
-//y = y_pos;
+actual_y += (target_y - actual_y)/8;
