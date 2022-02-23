@@ -9,8 +9,11 @@ if (!place_meeting(x, y+1, oWall)){
 	image_change_counter++;
 	if (image_change_counter%30 == 0) image_index = kinda_random(5, image_index);
 }else{
-	while(!place_meeting(x, y+0.1, oWall)){
-		y += 0.1;
+	if (!place_meeting(x, y+0.1, oWall)){
+		while(!place_meeting(x, y+0.1, oWall)){
+			y += 0.1;
+		}
+		audio_play_sound(random_asset("aRock", 4), 4, false);
 	}
 }
 

@@ -11,14 +11,14 @@
     "name": "grSound",
     "path": "audiogroups/grSound",
   },
-  "soundFile": "aSwap.mp3",
-  "duration": 0.888,
+  "soundFile": "aLand2.wav",
+  "duration": 0.81,
   "parent": {
     "name": "Sounds",
     "path": "folders/Sounds.yy",
   },
   "resourceVersion": "1.0",
-  "name": "aSwap",
+  "name": "aLand2",
   "tags": [],
   "resourceType": "GMSound",
 }

@@ -1,6 +1,5 @@
 /// @description Draw pause screen
 
-//Drawing the sprite
 var ds_grid = menu_pages[page];
 var ds_height = ds_grid_height(ds_grid);
 var start_y = actual_height/2 - (ds_height+1)*y_buffer/2;

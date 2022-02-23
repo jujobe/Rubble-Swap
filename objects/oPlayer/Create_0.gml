@@ -7,11 +7,12 @@ enum dir{
 
 jumpheight = 2.2 * global.grid_side / 30; //Jumps 2 blocks
 jumptimer = 80;
+in_air = true;
 
 facing = dir.left;
 
 function shoot_swap(){
-	audio_play_sound(aShoot, 2, false);
+	audio_play_sound(random_asset("aShoot", 1), 2, false);
 	if (instance_exists(oProjectileSwap)) exit;
 	var proj = instance_create_layer(x, y, "Projectile", oProjectileSwap);
 	proj.facing = facing;
