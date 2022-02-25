@@ -37,9 +37,10 @@ if (keyboard_check_pressed(global.key_jump) && place_meeting(x, y+1, oWall)){ //
 		while(!place_meeting(x, y+0.1, oWall)){
 			y += 0.1;
 		}
+		update_height(room_height - y + sprite_yoffset);
+
 		if (in_air){
 			in_air = false;
-			update_height(room_height - y + sprite_yoffset);
 		
 			audio_play_sound(random_asset("aLand", 3), 2, false);
 			sprite_index = sPlayer;

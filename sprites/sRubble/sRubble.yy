@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sRubble","path":"sprites/sRubble/sRubble.yy",},
-    "resourceVersion": "1.3",
+    "resourceVersion": "1.4",
     "name": "sRubble",
     "tags": [],
     "resourceType": "GMSequence",
