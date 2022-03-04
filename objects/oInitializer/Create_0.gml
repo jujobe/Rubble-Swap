@@ -25,7 +25,7 @@ global.highscore = ini_readwrite_real("Records", "Highscore", 0);
 ini_close();
 
 //GX challenge
-global.climb_challenge = "6db08bd7-fb15-4d01-863f-d27dad82fb6e";
+//global.climb_challenge = "43be833f-1272-4b51-a9d3-f59be566b705";
 
 audio_group_load(grSound);
 

@@ -29,5 +29,6 @@ function shift_down(){
 	}
 	ds_list_destroy(shift_worthy);
 	
+	global.current_height--;
 	global.shifted_rows++;
 }
