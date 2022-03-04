@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprYoYoBackgroundGM2","path":"sprites/sprYoYoBackgroundGM2/sprYoYoBackgroundGM2.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "sprYoYoBackgroundGM2",
     "tags": [],
     "resourceType": "GMSequence",

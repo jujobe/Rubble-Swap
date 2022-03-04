@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sProjectileSwap","path":"sprites/sProjectileSwap/sProjectileSwap.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "sProjectileSwap",
     "tags": [],
     "resourceType": "GMSequence",

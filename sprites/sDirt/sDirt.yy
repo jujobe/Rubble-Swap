@@ -75,7 +75,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sDirt","path":"sprites/sDirt/sDirt.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "sDirt",
     "tags": [],
     "resourceType": "GMSequence",

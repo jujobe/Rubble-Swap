@@ -14,7 +14,7 @@ facing = dir.left;
 function shoot_swap(){
 	audio_play_sound(random_asset("aShoot", 1), 2, false);
 	if (instance_exists(oProjectileSwap)) exit;
-	var proj = instance_create_layer(x, y, "Projectile", oProjectileSwap);
+	var proj = instance_create_layer(x+facing*5, y, "Projectile", oProjectileSwap);
 	proj.facing = facing;
 	proj.image_xscale = facing;
 }

@@ -59,7 +59,7 @@
     "eventToFunction": {},
     "eventStubScript": null,
     "parent": {"name":"sprYoYoTextbox","path":"sprites/sprYoYoTextbox/sprYoYoTextbox.yy",},
-    "resourceVersion": "1.4",
+    "resourceVersion": "1.3",
     "name": "sprYoYoTextbox",
     "tags": [],
     "resourceType": "GMSequence",

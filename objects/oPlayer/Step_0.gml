@@ -5,7 +5,7 @@ if (global.pause){
 	exit;
 }else image_speed = 1;
 
-if (keyboard_check_pressed(ord("P")) || keyboard_check_pressed(vk_escape)){
+if (keyboard_check_pressed(ord("P"))){
 	instance_create_layer(0, 0, "Extra", oPause);
 	exit;
 }
