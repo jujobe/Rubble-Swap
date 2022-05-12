@@ -14,6 +14,10 @@ fontsize = font_get_size(fPoints);
 y_buffer = 60;
 start_x = actual_width/3;
 
+start_y = actual_height/2 - y_buffer*1.5;
+
+end_y = start_y + 2*y_buffer;
+
 mouse_last_y = mouse_y; //Check recent mouse movement
 
 select_col = make_color_rgb(218, 182, 19);

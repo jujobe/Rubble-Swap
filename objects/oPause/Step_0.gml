@@ -9,10 +9,6 @@ if (change){
 	if (current_option == 1) current_option = 0;
 	else current_option = 1;
 }
- 
-var start_y = actual_height/2 - y_buffer*1.5;
-
-var end_y = start_y + 2*y_buffer;
 
 //Mouse detection
 var mouse_menu_x = device_mouse_x_to_gui(0);

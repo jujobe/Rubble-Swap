@@ -5,6 +5,11 @@ randomise();
 global.grid_side = 16; //px
 global.current_height = 1;
 
+global.game_width = 112;
+global.game_height = 128;
+
+global.game_scale = 4;
+
 global.pause = false;
 
 ini_open("Settings.ini");

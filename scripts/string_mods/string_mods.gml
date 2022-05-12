@@ -23,3 +23,9 @@ function key_to_string(key_real){
 	
 	return output_str;
 }
+
+//Removes "Level" from the room name and returns the number
+function level_number(lvl){
+	var name = room_get_name(lvl);
+	return string_replace(name, "Level", "");
+}

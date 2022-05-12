@@ -1,5 +1,7 @@
 /// @description Initialize grids and others variables
 
+global.game_width = 112
+
 enum menu_page{
 	main,
 	controls,
@@ -17,6 +19,7 @@ enum menu_element_type{
 //Creating menu pages
 ds_menu_main = create_menu_page(
 	["Endless", menu_element_type.script_runner, room_goto, Endless],
+	["Levels", menu_element_type.script_runner, room_goto, LevelSelect],
 	//["Settings", menu_element_type.page_transfer, menu_page.audio],
 	["Controls", menu_element_type.page_transfer, menu_page.controls],
 	["Sound", menu_element_type.toggle, toggle_sound, global.sound, ["ON", "OFF"]]);
