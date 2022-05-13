@@ -1,7 +1,5 @@
 /// @description Initialize grids and others variables
 
-global.game_width = 112
-
 enum menu_page{
 	main,
 	controls,
