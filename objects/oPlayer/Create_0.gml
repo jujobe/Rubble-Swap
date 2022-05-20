@@ -9,11 +9,11 @@ jumpheight = 2.2 * global.grid_side / 30; //Jumps 2 blocks
 jumptimer = 80;
 in_air = true;
 
-facing = dir.left;
+facing = dir.right;
 
 function shoot_swap(){
-	audio_play_sound(random_asset("aShoot", 1), 2, false);
 	if (instance_exists(oProjectileSwap)) exit;
+	audio_play_sound(random_asset("aShoot", 1), 2, false);
 	var proj = instance_create_layer(x, y, "Projectile", oProjectileSwap);
 	proj.facing = facing;
 	proj.image_xscale = facing;
@@ -27,13 +27,13 @@ function get_swapped(rubble_id){
 	var new_x = rubble_id.x + x_offset;
 	var new_y = rubble_id.y + y_offset;
 	
-	oRubbleRain.amount_arr[rubble_id.x div global.grid_side]--;
+	if (room == Endless) oRubbleRain.amount_arr[rubble_id.x div global.grid_side]--;
 	
 	rubble_id.x = x - x_offset;
 	rubble_id.y = y - y_offset;
 	x = new_x;
 	y = new_y;
 	
-	oRubbleRain.amount_arr[rubble_id.x div global.grid_side]++;
+	if (room == Endless) oRubbleRain.amount_arr[rubble_id.x div global.grid_side]++;
 	jumptimer = 40;
 }

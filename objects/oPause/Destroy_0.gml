@@ -2,4 +2,4 @@
 
 global.pause = false;
 
-save_highscore();
+if (room == Endless) save_highscore();

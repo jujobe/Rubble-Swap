@@ -8,8 +8,8 @@
   "spriteMaskId": null,
   "persistent": false,
   "parentObjectId": {
-    "name": "oDirt",
-    "path": "objects/oDirt/oDirt.yy",
+    "name": "oWall",
+    "path": "objects/oWall/oWall.yy",
   },
   "physicsObject": false,
   "physicsSensor": false,

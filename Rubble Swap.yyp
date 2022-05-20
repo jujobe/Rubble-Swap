@@ -70,6 +70,7 @@
     {"id":{"name":"aLand2","path":"sounds/aLand2/aLand2.yy",},"order":5,},
     {"id":{"name":"objChallengeGetChallenges","path":"objects/objChallengeGetChallenges/objChallengeGetChallenges.yy",},"order":0,},
     {"id":{"name":"oProjectileSwap","path":"objects/oProjectileSwap/oProjectileSwap.yy",},"order":6,},
+    {"id":{"name":"oVictoryBlock","path":"objects/oVictoryBlock/oVictoryBlock.yy",},"order":13,},
     {"id":{"name":"gxc_api_config","path":"scripts/gxc_api_config/gxc_api_config.yy",},"order":3,},
     {"id":{"name":"objGetProfile","path":"objects/objGetProfile/objGetProfile.yy",},"order":4,},
     {"id":{"name":"fntYoYo20","path":"fonts/fntYoYo20/fntYoYo20.yy",},"order":0,},

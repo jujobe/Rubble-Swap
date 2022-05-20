@@ -3,7 +3,10 @@
 x = room_width/2;
 y = room_height - global.grid_side;
 
-if (room == MainMenu) global.game_width = 112;
+if (room == MainMenu){
+	global.game_width = 112;
+	global.game_height = 128;
+}
 
 target_y = y;
 just_shifted = false;

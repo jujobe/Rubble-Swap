@@ -1,6 +1,7 @@
 /// @description Set up Level array
 
-global.game_width = 240;
+global.game_width = 176;
+global.game_height = 112;
 
 levels_arr = [Level1, Level2, Level3, Level4, Level5, Level6, Level7, Level8, Level9, Level10];
 levels_amount = array_length(levels_arr);

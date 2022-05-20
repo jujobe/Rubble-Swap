@@ -7,7 +7,7 @@ if (!place_meeting(x, y+1, oWall)){
 	
 	//Changes image frame every second
 	image_change_counter++;
-	if (image_change_counter%30 == 0) image_index = kinda_random(5, image_index);
+	if (image_change_counter%30 == 0) image_index = kinda_random(4, image_index);
 }else{
 	if (!place_meeting(x, y+0.1, oWall)){
 		while(!place_meeting(x, y+0.1, oWall)){

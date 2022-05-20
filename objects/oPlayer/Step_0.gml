@@ -11,7 +11,7 @@ if (keyboard_check_pressed(ord("P")) || keyboard_check_pressed(vk_escape)){
 }
 
 if (keyboard_check_pressed(ord("R"))){
-	save_highscore();
+	if (room == Endless) save_highscore();
 	room_restart();
 }
 
@@ -37,7 +37,7 @@ if (keyboard_check_pressed(global.key_jump) && place_meeting(x, y+1, oWall)){ //
 		while(!place_meeting(x, y+0.1, oWall)){
 			y += 0.1;
 		}
-		update_height(room_height - y + sprite_yoffset);
+		if (room == Endless) update_height(room_height - y + sprite_yoffset);
 
 		if (in_air){
 			in_air = false;
