@@ -54,4 +54,7 @@ if (keyboard_check_pressed(global.key_jump) && place_meeting(x, y+1, oWall)){ //
 	image_index = 0;
 }
 
-if (place_meeting(x, y, oRubble)) instance_create_layer(0,0, "Extra", oGameEnd);
+if (place_meeting(x, y, oRubble)){
+	if (room == Endless) instance_create_layer(0,0, "Extra", oGameEnd);
+	else instance_create_layer(0,0, "Extra", oDefeatScreen);
+}

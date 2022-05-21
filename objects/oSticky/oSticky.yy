@@ -4,7 +4,10 @@
   "visible": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "oRubble",
+    "path": "objects/oRubble/oRubble.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -25,7 +28,7 @@
     "path": "folders/Objects/Walls/Swappables.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oStickyBlock",
+  "name": "oSticky",
   "tags": [],
   "resourceType": "GMObject",
 }

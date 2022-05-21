@@ -8,8 +8,6 @@ draw_set_alpha(1);
 //Draw text
 draw_set_color(yellow);
 
-if (global.highscore < result) draw_text(start_x, 50, "New Highscore!");
+draw_text(start_x, 120, "You have lost");
 
-draw_text(start_x, 120, "Score: " + string(result));
-
-draw_text(start_x, 220, "Restart?");
+draw_text(start_x, 220, "Retry?");
